@@ -1,0 +1,5 @@
+# Ignore the dist folder (compiled CSS)
+# /dist/
+
+# Ignore personal notes
+notes.md

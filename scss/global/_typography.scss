@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "Poppins";
+  font-weight: 400;
+  src: url("/assets/fonts/poppins-regular.woff2") format("woff2"),
+    url("/assets/fonts/poppins-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 700;
+  src: url("/assets/fonts/poppins-bold.woff2") format("woff2"),
+    url("/assets/fonts/poppins-bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 300;
+  src: url("/assets/fonts/poppins-light.woff2") format("woff2"),
+    url("/assets/fonts/poppins-light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Lavish";
+  font-weight: 400;
+  src: url("/assets/fonts/lavishlyyours-regular.woff2") format("woff2"),
+    url("/assets/fonts/lavishlyyours-regular.woff") format("woff");
+}
+
+a,
+a:focus {
+  text-decoration: none;
+  color: inherit;
+}
