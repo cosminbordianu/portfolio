@@ -26,8 +26,23 @@
     url("/assets/fonts/lavishlyyours-regular.woff") format("woff");
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--clr-headings);
+}
+
 a,
 a:focus {
   text-decoration: none;
+
   color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
 }

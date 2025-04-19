@@ -1,4 +1,5 @@
 @use "../util/functions" as *;
+@use "../util/breakpoints" as *;
 
 html {
   font-size: 100%;
@@ -13,13 +14,26 @@ html {
   padding: 0;
 }
 
-img {
+img,
+svg {
   max-width: 100%;
+  width: 100%;
   display: block;
 }
 
 body {
-  background-color: var(--clr-background);
+  background-color: var(--clr-main);
   color: var(--clr-text);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
   font-size: 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 rem(16);
+
+  @include breakpoint-up("desktop") {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
