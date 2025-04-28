@@ -1,13 +1,12 @@
 :root {
   --clr-main: hsl(48, 24%, 96%);
-  --clr-text: hsl(0, 0%, 17%);
+  --clr-text: rgb(85, 85, 85);
   --clr-headings: hsl(0, 0%, 0%);
   --clr-border: hsl(0, 0%, 91%);
 
   --ff-primary: "Roboto", sans-serif;
   --ff-secundary: "Lavish", sans-serif;
 
-  --fw-light: 300;
   --fw-regular: 400;
   --fw-bold: 700;
 }

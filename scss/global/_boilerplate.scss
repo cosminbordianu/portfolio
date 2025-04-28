@@ -4,6 +4,7 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -22,7 +23,7 @@ svg {
 }
 
 body {
-  background-color: var(--clr-main);
+  letter-spacing: 0.1rem;
   color: var(--clr-text);
   font-family: var(--ff-primary);
   font-weight: var(--fw-regular);
