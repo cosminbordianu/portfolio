@@ -1,8 +1,25 @@
 :root {
-  --clr-main: hsl(48, 24%, 96%);
+  --clr-background: white;
   --clr-text: rgb(85, 85, 85);
   --clr-headings: hsl(0, 0%, 0%);
   --clr-border: hsl(0, 0%, 91%);
+
+  --clr-button-background1: transparent;
+  --clr-button-background2: rgb(85, 85, 85);
+  --clr-button-text1: black;
+  --clr-button-text2: white;
+  --clr-button-background-hover: black;
+  --clr-button-text-hover: white;
+  --clr-button-border: rgb(85, 85, 85);
+
+  --clr-nav-background: white;
+  --clr-nav-links: hsl(48, 24%, 96%);
+  --clr-nav-text: hsl(0, 0%, 0%);
+
+  --clr-hover: rgb(251, 251, 251);
+
+  --clr-icon-github1: black;
+  --clr-icon-github2: white;
 
   --ff-primary: "Roboto", sans-serif;
   --ff-secundary: "Lavish", sans-serif;

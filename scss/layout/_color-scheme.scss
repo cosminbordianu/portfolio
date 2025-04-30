@@ -1,0 +1,63 @@
+html {
+  color-scheme: dark light;
+}
+
+[data-theme="dark"] {
+  --clr-background: #11071f;
+  --clr-text: white;
+  --clr-headings: #7127ba;
+  --clr-border: hsl(0, 0%, 91%);
+
+  --clr-button-background1: transparent;
+  --clr-button-background2: #38126d;
+  --clr-button-text1: white;
+  --clr-button-text2: white;
+  --clr-button-background-hover: #261045;
+  --clr-button-text-hover: white;
+  --clr-button-border: #7127ba;
+
+  --clr-nav1: #130428;
+  --clr-nav2: #251043;
+  --clr-nav3: #38126d;
+  --clr-nav4: #261045;
+  --clr-nav5: #190634;
+  --clr-nav-background: linear-gradient(
+    to right,
+    var(--clr-nav1) 7%,
+    var(--clr-nav2) 34%,
+    var(--clr-nav3) 57%,
+    var(--clr-nav4) 85%,
+    var(--clr-nav5) 100%
+  );
+  --clr-nav-links: #2c1250;
+  --clr-nav-text: #a5a5a5;
+
+  --clr-hover: #261045;
+
+  --clr-icon-github1: white;
+  --clr-icon-github2: white;
+}
+
+[data-theme="light"] {
+  --clr-background: white;
+  --clr-text: rgb(85, 85, 85);
+  --clr-headings: hsl(0, 0%, 0%);
+  --clr-border: hsl(0, 0%, 91%);
+
+  --clr-button-background1: transparent;
+  --clr-button-background2: rgb(85, 85, 85);
+  --clr-button-text1: black;
+  --clr-button-text2: white;
+  --clr-button-background-hover: black;
+  --clr-button-text-hover: white;
+  --clr-button-border: rgb(85, 85, 85);
+
+  --clr-nav-background: white;
+  --clr-nav-links: hsl(48, 24%, 96%);
+  --clr-nav-text: hsl(0, 0%, 0%);
+
+  --clr-hover: rgb(251, 251, 251);
+
+  --clr-icon-github1: black;
+  --clr-icon-github2: white;
+}

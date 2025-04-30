@@ -6,7 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--clr-headings);
+  color: var(--clr-nav-text);
+  z-index: 100;
 
   &__nav {
     position: fixed;
@@ -21,6 +22,7 @@
 
   &__name {
     font-family: var(--ff-secundary);
+    color: var(--clr-headings);
     font-size: 2.4rem;
     position: relative;
   }
@@ -35,12 +37,12 @@
   transform: translateX(-50%);
   padding: 0.7rem 1rem;
   border-radius: 1rem;
-  background-color: white;
-  box-shadow: 0 0 rem(10) lightgray;
+  background: var(--clr-nav-background);
+  box-shadow: 0 0 rem(10) var(--clr-text);
 
   img {
     border: 2px solid var(--clr-border);
-    background-color: var(--clr-main);
+    background-color: var(--clr-nav-links);
     box-sizing: content-box;
     width: rem(30);
     height: rem(30);
@@ -68,9 +70,10 @@
     justify-content: center;
     user-select: none;
     border-radius: 0.5rem;
-    background-color: var(--clr-main);
     transition: transform 0.3s ease-in-out, width 0.3s;
     width: 50px;
+    color: var(--clr-headings);
+    background-color: var(--clr-hover);
 
     &:focus-visible {
       outline: none;
@@ -100,9 +103,15 @@
 
   img {
     transition: all 0.3s;
+
+    // Aici adaug svg
   }
 
   &:is(:hover, :focus-visible) img {
     background-color: var(--clr-border);
   }
+
+  // &[aria-checked="true"] svg {
+  // fill: ;
+  // }
 }

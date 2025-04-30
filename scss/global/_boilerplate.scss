@@ -23,6 +23,7 @@ svg {
 }
 
 body {
+  background-color: var(--clr-background);
   letter-spacing: 0.1rem;
   color: var(--clr-text);
   font-family: var(--ff-primary);
@@ -32,6 +33,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 0 rem(16);
+  transition: all 0.3s;
 
   @include breakpoint-up("desktop") {
     padding-left: 0;

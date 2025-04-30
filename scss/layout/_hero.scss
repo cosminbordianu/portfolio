@@ -1,13 +1,6 @@
 @use "../util/breakpoints" as *;
 @use "../util/functions" as *;
 
-main {
-  flex: 1;
-  max-width: em(1400);
-  width: 100%;
-  align-self: center;
-}
-
 .hero {
   display: flex;
   flex-direction: column;
@@ -62,7 +55,7 @@ main {
     justify-content: center;
     gap: 0.5rem;
 
-    @include breakpoint-down("tablet") {
+    @include breakpoint-down("mobile") {
       flex-direction: column;
     }
 
@@ -70,30 +63,45 @@ main {
       cursor: pointer;
       padding: 1rem 1.4rem;
       border-radius: 2rem;
-      border: 1px solid var(--clr-text);
+      border: 1px solid var(--clr-button-border);
       font-weight: bold;
       font-size: 0.9rem;
 
-      color: black;
+      color: var(--clr-button-text1);
       transition: all 0.3s;
       width: rem(140);
     }
 
     .button.cv {
-      background-color: transparent;
+      background: var(--clr-button-background1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+
+      svg {
+        fill: var(--clr-icon-github1);
+        transition: fill 0.3s ease;
+        width: 25px;
+        height: 25px;
+      }
 
       &:hover {
-        background-color: black;
-        color: var(--clr-main);
+        background: var(--clr-button-background-hover);
+        color: var(--clr-button-text-hover);
+
+        svg {
+          fill: var(--clr-icon-github2);
+        }
       }
     }
 
     .button.contact {
-      background-color: var(--clr-text);
-      color: white;
+      background: var(--clr-button-background2);
+      color: var(--clr-button-text2);
 
       &:hover {
-        background-color: black;
+        background: var(--clr-button-background-hover);
       }
     }
   }
@@ -107,10 +115,11 @@ main {
     svg {
       width: rem(35);
       height: rem(35);
+      fill: var(--clr-headings);
     }
 
     &:hover {
-      background-color: rgb(251, 251, 251);
+      background-color: var(--clr-hover);
     }
   }
 

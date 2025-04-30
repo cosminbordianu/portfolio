@@ -1,0 +1,97 @@
+@use "../global/variables" as *;
+@use "../util/breakpoints" as *;
+@use "../util/functions" as *;
+
+.about {
+  &__container {
+    display: grid;
+    text-align: center;
+    justify-content: center;
+
+    @include breakpoint-up("tablet") {
+      display: flex;
+    }
+  }
+
+  &__skills,
+  &__text {
+    background-color: var(--clr-hover);
+    padding: 2rem 1rem;
+    max-width: em(600);
+    box-shadow: 0 0 3px lightgray;
+
+    @include breakpoint-up("tablet") {
+      padding: 2rem;
+    }
+  }
+
+  &__skills {
+    border-radius: 0 0 0.5rem 0.5rem;
+    position: relative;
+    order: 1;
+    display: flex;
+    flex-direction: column;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 80%;
+      height: 2px;
+      background-color: var(--clr-headings);
+      left: 50%;
+      transform: translateX(-50%);
+      top: -1px;
+    }
+
+    &-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    &-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80px;
+
+      img,
+      svg {
+        width: 50px;
+        height: 50px;
+      }
+
+      svg {
+        fill: var(--clr-icon-github1);
+      }
+    }
+
+    @include breakpoint-up("tablet") {
+      order: -1;
+      border-radius: 0.5rem 0 0 0.5rem;
+
+      &::before {
+        width: 2px;
+        height: 80%;
+        top: 50%;
+        left: calc(100% - 0.5px);
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__text {
+    width: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
+
+    @include breakpoint-up("tablet") {
+      border-radius: 0 0.5rem 0.5rem 0;
+      p {
+        text-align: left;
+      }
+    }
+  }
+}

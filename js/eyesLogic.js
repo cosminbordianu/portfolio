@@ -18,17 +18,31 @@ export default class eyesLogic {
     if (hasMouse) {
       this.eyes.forEach((eye) => {
         eye.classList.remove("invisible-eyes");
+
+        eye.addEventListener("mouseenter", () => {
+          this.heroImage.style.backgroundImage =
+            "url(/assets/images/me-mobile.svg)";
+          this.eyes.forEach((e) => e.classList.add("invisible-eyes"));
+        });
+        eye.addEventListener("mouseleave", () => {
+          this.heroImage.style.backgroundImage = "";
+          this.eyes.forEach((e) => e.classList.remove("invisible-eyes"));
+        });
       });
+
       document.body.addEventListener("mousemove", (e) => {
         this.eyeball(e);
       });
+
       this.heroImage.style.backgroundImage = "";
     } else {
       this.heroImage.style.backgroundImage =
         "url(/assets/images/me-mobile.svg)";
+
       this.eyes.forEach((eye) => {
         eye.classList.add("invisible-eyes");
       });
+
       document.body.removeEventListener("mousemove", (e) => {
         this.eyeball(e);
       });

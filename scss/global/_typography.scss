@@ -1,3 +1,5 @@
+@use "../util/breakpoints" as *;
+
 @font-face {
   font-family: "Poppins";
   font-weight: 400;
@@ -28,11 +30,19 @@ h6 {
   color: var(--clr-headings);
 }
 
-a,
-a:focus {
-  text-decoration: none;
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1.4rem;
+}
 
-  color: inherit;
+p {
+  word-wrap: break-word;
+}
+
+a,
+a:focus,
+a:visited {
+  text-decoration: none;
 }
 
 ul,

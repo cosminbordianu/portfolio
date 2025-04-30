@@ -1,0 +1,20 @@
+@use "../global/variables" as *;
+@use "../util/breakpoints" as *;
+@use "../util/functions" as *;
+
+main {
+  flex: 1;
+  max-width: em(1000);
+  width: 100%;
+  align-self: center;
+}
+
+section {
+  @include breakpoint-down("desktop") {
+    margin-top: 3rem;
+  }
+}
+
+footer {
+  margin-top: 100rem;
+}
