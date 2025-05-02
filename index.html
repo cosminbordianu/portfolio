@@ -61,7 +61,11 @@
           <h1 class="hero__title">Cosmin</h1>
           <p class="hero__text-p1">Frontend Developer</p>
           <div class="hero__contact">
-            <button class="cv button">
+            <a
+              class="cv button"
+              href="https://github.com/cosminbordianu"
+              target="_blank"
+            >
               <p>GitHub</p>
               <svg
                 width="25px"
@@ -88,7 +92,7 @@
                   </g>
                 </g>
               </svg>
-            </button>
+            </a>
             <a class="contact button" href="#">Contact</a>
           </div>
           <a href="#about" class="hero__scroll-link">
@@ -117,23 +121,23 @@
             <div class="about__skills-icons">
               <div class="about__skills-card">
                 <img src="/assets/images/html-5.png" alt="html icon" />
-                <h4>HTML</h4>
+                <h3>HTML</h3>
               </div>
               <div class="about__skills-card">
                 <img src="/assets/images/css.png" alt="css icon" />
-                <h4>CSS</h4>
+                <h3>CSS</h3>
               </div>
               <div class="about__skills-card">
                 <img src="/assets/images/js.png" alt="javascript icon" />
-                <h4>JavaScript</h4>
+                <h3>JavaScript</h3>
               </div>
               <div class="about__skills-card">
                 <img src="/assets/images/git.png" alt="git icon" />
-                <h4>Git</h4>
+                <h3>Git</h3>
               </div>
               <div class="about__skills-card">
                 <img src="/assets/images/web.png" alt="accessibility icon" />
-                <h4>Accessbility</h4>
+                <h3>Accessbility</h3>
               </div>
 
               <div class="about__skills-card">
@@ -165,18 +169,18 @@
                     </g>
                   </g>
                 </svg>
-                <h4>GitHub</h4>
+                <h3>GitHub</h3>
               </div>
               <div class="about__skills-card">
                 <img src="/assets/images/sass.png" alt="sass icon" />
-                <h4>Sass</h4>
+                <h3>Sass</h3>
               </div>
               <div class="about__skills-card">
                 <img
                   src="/assets/images/responsive-design.png"
                   alt="responsive design icon"
                 />
-                <h4>Responsive Design</h4>
+                <h3>Responsive Design</h3>
               </div>
             </div>
           </div>
@@ -196,6 +200,37 @@
             </p>
           </div>
         </div>
+      </section>
+      <section class="contact" id="contact">
+        <form name="contact" method="POST" id="form" netlify>
+          <div>
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              placeholder="Name"
+            />
+            <p class="error">Name cannot be empty</p>
+          </div>
+          <div>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+            />
+            <p class="error">Email cannot be empty</p>
+          </div>
+          <div>
+            <textarea
+              name="textarea"
+              id="textarea"
+              placeholder="Write Message"
+            ></textarea>
+            <p class="error">The message cannot be empty</p>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
       </section>
     </main>
 

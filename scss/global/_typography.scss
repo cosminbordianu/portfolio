@@ -1,6 +1,13 @@
 @use "../util/breakpoints" as *;
 
 @font-face {
+  font-family: "Preahvihear";
+  font-weight: 400;
+  src: url("/assets/fonts/preahvihear-regular.woff2") format("woff2"),
+    url("/assets/fonts/preahvihear-regular.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "Poppins";
   font-weight: 400;
   src: url("/assets/fonts/poppins-regular.woff2") format("woff2"),
@@ -28,11 +35,16 @@ h4,
 h5,
 h6 {
   color: var(--clr-headings);
+  font-family: var(--ff-headings);
 }
 
 h2 {
   font-size: 1.2rem;
   margin-bottom: 1.4rem;
+}
+
+h3 {
+  font-size: 0.9rem;
 }
 
 p {

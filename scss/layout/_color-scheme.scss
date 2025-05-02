@@ -1,8 +1,5 @@
-html {
-  color-scheme: dark light;
-}
-
 [data-theme="dark"] {
+  color-scheme: dark;
   --clr-background: #11071f;
   --clr-text: white;
   --clr-headings: #7127ba;
@@ -39,6 +36,7 @@ html {
 }
 
 [data-theme="light"] {
+  color-scheme: light;
   --clr-background: white;
   --clr-text: rgb(85, 85, 85);
   --clr-headings: hsl(0, 0%, 0%);

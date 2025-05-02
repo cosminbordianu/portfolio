@@ -19,12 +19,11 @@
   &__text {
     display: flex;
     flex-direction: column;
-    gap: rem(15);
     font-weight: var(--fw-bold);
 
     &-p1 {
       font-size: 1.4rem;
-
+      margin-bottom: 1rem;
       @include breakpoint-down("tablet") {
         font-size: 1rem;
       }
