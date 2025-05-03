@@ -1,0 +1,137 @@
+@use "../util/breakpoints" as *;
+@use "../util/functions" as *;
+@use "../global/variables" as *;
+
+@include breakpoint-up("desktop") {
+  .projects__card:nth-child(even) {
+    .projects__card-image {
+      order: -1;
+    }
+  }
+}
+
+.projects {
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+
+  @include breakpoint-up("tablet") {
+    max-width: 800px;
+  }
+  @include breakpoint-up("desktop") {
+    max-width: 100%;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+    position: relative;
+    margin-bottom: 2rem;
+
+    span {
+      width: max-content;
+      background-color: var(--clr-background);
+      padding-inline: 1rem;
+      transition: all 0.3s;
+    }
+
+    span::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: var(--clr-headings);
+      left: 0;
+      top: 50%;
+      z-index: -1;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    @include breakpoint-up("dekstop") {
+      gap: 10rem;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &-image {
+      order: 1;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      margin: auto;
+      box-shadow: 0 0 3px lightgray;
+      border-radius: 0.5rem;
+      overflow: hidden;
+
+      a:focus-visible img {
+        border: 2px solid black;
+        border-radius: 0.5rem;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.3s ease;
+      }
+
+      &:hover img {
+        transform: scale(1.1);
+      }
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      text-align: center;
+
+      button {
+        background-color: var(--clr-button-background2);
+        color: var(--clr-button-text2);
+        border: 2px solid var(--clr-button-border);
+        border-radius: 3rem;
+        padding: 1rem 2rem;
+        margin: 1rem auto 0 auto;
+        font-size: 1.2rem;
+        width: max-content;
+        align-self: start;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          background-color: var(--clr-button-background-hover);
+        }
+      }
+
+      h3 {
+        font-size: 1.7rem;
+      }
+    }
+
+    @include breakpoint-up("desktop") {
+      flex-direction: row;
+      gap: 4rem;
+
+      &-image {
+        width: 450px;
+        img {
+          height: 300px;
+        }
+      }
+
+      &-text {
+        flex: 1;
+      }
+    }
+  }
+}
