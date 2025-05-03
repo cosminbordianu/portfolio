@@ -3,15 +3,15 @@ export default class formLogic {
     const form = document.getElementById("form");
 
     form.addEventListener("submit", (e) => {
-      e.preventDefault();
-
-      checkInputs();
+      if (!checkInputs()) {
+        e.preventDefault();
+      }
     });
 
     const checkInputs = () => {
       const inputs = document.querySelectorAll("#form input, #form textarea");
       const email = document.querySelector("#form input#email");
-      let formValid = true; // track if the form is valid
+      let formValid = true; // Flag to track if the form is valid
 
       inputs.forEach((input) => {
         if (input.value === "") {
@@ -38,19 +38,7 @@ export default class formLogic {
       }
 
       if (formValid) {
-        // Add Netlify logic
-        const formData = new FormData(form);
-
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: new URLSearchParams(formData).toString(),
-        })
-          .then(() => {
-            alert("Message sent!");
-            form.reset();
-          })
-          .catch((error) => alert("Error sending message: " + error));
+        form.submit();
       }
     };
 
