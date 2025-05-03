@@ -20,13 +20,10 @@ export default class eyesLogic {
         eye.classList.remove("invisible-eyes");
 
         eye.addEventListener("mouseenter", () => {
-          this.heroImage.style.backgroundImage =
-            "url(/assets/images/me-mobile.svg)";
-          this.eyes.forEach((e) => e.classList.add("invisible-eyes"));
+          this.eyes.forEach((e) => e.classList.add("no-rotate"));
         });
         eye.addEventListener("mouseleave", () => {
-          this.heroImage.style.backgroundImage = "";
-          this.eyes.forEach((e) => e.classList.remove("invisible-eyes"));
+          this.eyes.forEach((e) => e.classList.remove("no-rotate"));
         });
       });
 

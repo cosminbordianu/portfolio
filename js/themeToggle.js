@@ -25,7 +25,7 @@ export default class themToggle {
 
     toggleBtn.addEventListener("click", () => {
       const isDarkMode = toggleBtn.getAttribute("aria-checked") == "true";
-      console.log(isDarkMode);
+
       if (isDarkMode) {
         disableDarkMode();
       } else {

@@ -147,6 +147,17 @@
     gap: 0.9rem;
   }
 
+  @media (width: 1400px) {
+    gap: 1.7rem;
+  }
+
+  .eye.no-rotate {
+    transform: none !important;
+  }
+  .eye:nth-child(2).no-rotate {
+    transform: rotate(180deg) !important;
+  }
+
   @include breakpoint-up("tablet") {
     .eye {
       position: relative;
@@ -175,6 +186,20 @@
           width: 8px;
           height: 8px;
         }
+      }
+
+      @media (width: 1400px) {
+        top: rem(85);
+        left: rem(192);
+
+        &:before {
+          width: 10px;
+          height: 10px;
+        }
+      }
+
+      @media (width: 800px) {
+        display: none;
       }
     }
   }
