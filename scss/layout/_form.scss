@@ -40,14 +40,14 @@
 
   button {
     padding: 1.2rem;
-    background-color: #eba154;
+    background-color: var(--clr-button-background2);
     text-transform: uppercase;
-    color: white;
+    color: var(--clr-button-text2);
     font-weight: var(--fw-bold);
     border: none;
     border-radius: 0.3rem;
     letter-spacing: 0.1rem;
-    box-shadow: 0 4px 0 #99642c;
+    box-shadow: 0 4px 0 rgb(49, 13, 64);
     cursor: pointer;
 
     &:hover {

@@ -40,7 +40,7 @@
   background: var(--clr-nav-background);
   box-shadow: 0 0 rem(10) var(--clr-text);
 
-  img {
+  img, svg {
     border: 2px solid var(--clr-border);
     background-color: var(--clr-nav-links);
     box-sizing: content-box;
@@ -100,18 +100,4 @@
   background-color: transparent;
   cursor: pointer;
   border-radius: 0.5rem;
-
-  img {
-    transition: all 0.3s;
-
-    // Aici adaug svg
-  }
-
-  &:is(:hover, :focus-visible) img {
-    background-color: var(--clr-border);
-  }
-
-  // &[aria-checked="true"] svg {
-  // fill: ;
-  // }
 }

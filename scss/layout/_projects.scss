@@ -61,6 +61,10 @@
     flex-direction: column;
     gap: 2rem;
 
+    .hero__contact {
+      margin-top: 1rem;
+    }
+
     &-image {
       order: 1;
       width: 100%;
@@ -79,7 +83,7 @@
       img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         transition: all 0.3s ease;
       }
 
@@ -95,24 +99,6 @@
       gap: 1rem;
       text-align: center;
 
-      button {
-        background-color: var(--clr-button-background2);
-        color: var(--clr-button-text2);
-        border: 2px solid var(--clr-button-border);
-        border-radius: 3rem;
-        padding: 1rem 2rem;
-        margin: 1rem auto 0 auto;
-        font-size: 1.2rem;
-        width: max-content;
-        align-self: start;
-        cursor: pointer;
-        transition: all 0.3s;
-
-        &:hover {
-          background-color: var(--clr-button-background-hover);
-        }
-      }
-
       h3 {
         font-size: 1.7rem;
       }
@@ -124,9 +110,6 @@
 
       &-image {
         width: 450px;
-        img {
-          height: 300px;
-        }
       }
 
       &-text {

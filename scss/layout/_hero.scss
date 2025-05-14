@@ -81,8 +81,8 @@
       svg {
         fill: var(--clr-icon-github1);
         transition: fill 0.3s ease;
-        width: 25px;
-        height: 25px;
+        width: rem(18);
+        height: rem(18);
       }
 
       &:hover {
